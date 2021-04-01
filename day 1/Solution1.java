@@ -58,7 +58,7 @@ class Solution1 {
         return linkedList;
     }
 
-    // iterate over thelinkedList and check conditions
+    // iterate over the linkedList and check conditions
     private static boolean checkValues(LinkedList<Integer> linkedList) {
         for (int i = 1; i < linkedList.size(); i++) {
             if (linkedList.get(i) + linkedList.get(0) == 2020) {

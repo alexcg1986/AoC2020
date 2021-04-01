@@ -11,7 +11,7 @@ import java.util.LinkedList;
 class Solution2 {
     public static void main(String[] args) {
         LinkedList<Integer> values = getValues();
-        while (!checkValues(values) && values.size() > 1)
+        while (!checkValues(values) && values.size() > 2)
             values.pollFirst();
     }
 
@@ -27,7 +27,7 @@ class Solution2 {
         return linkedList;
     }
 
-    // iterate over thelinkedList and check conditions
+    // iterate over the linkedList and check conditions
     private static boolean checkValues(LinkedList<Integer> linkedList) {
         for (int i = 1; i < linkedList.size(); i++) {
             int temporal;
