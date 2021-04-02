@@ -1,5 +1,4 @@
-# AoC2020
-Advent of Code 2020
+# Advent of Code 2020
 
 |  Day  | Part 1 | Part 2 |
 |:-----:|:------:|:------:|
