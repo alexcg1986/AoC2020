@@ -128,7 +128,7 @@ public class Solution2 {
     }
 
     private static boolean checkField(String field, String param) {
-        // We need to filter the input field because the pattern it's strict ^ & $
+        // We need to filter the input field because the pattern is strict ^ & $
         final String FIELD = field.split(param)[1];
         switch (param) {
         case "pid:":
