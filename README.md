@@ -1,4 +1,5 @@
 # Advent of Code 2020
+Trying to solve past year's AoC challenges at one per day rate. 
 
 |Day|Part 1|Part 2|
 |:-:|:-:|:-:|
