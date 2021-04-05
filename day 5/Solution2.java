@@ -57,7 +57,7 @@ public class Solution2 {
     private static int getMySeat(List<Integer> seatIds) {
         Collections.sort(seatIds);
         int mySeatId = Integer.MIN_VALUE;
-        for (int i = 1; i < seatIds.size() - 1; i++)
+        for (int i = 0; i < seatIds.size() - 1; i++)
             if (seatIds.get(i) != seatIds.get(i + 1) - 1)
                 mySeatId = seatIds.get(i) + 1;
         return mySeatId;
