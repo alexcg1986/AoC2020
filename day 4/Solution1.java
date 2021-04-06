@@ -83,6 +83,8 @@ public class Solution1 {
                     fields.clear();
                 }
             });
+            if (!fields.isEmpty()) // check if there were values left after EOF
+                input.add(fields);
         } catch (Exception e) {
             System.out.println(e);
         }

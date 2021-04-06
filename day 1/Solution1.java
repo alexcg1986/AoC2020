@@ -61,8 +61,8 @@ class Solution1 {
     // iterate over the linkedList and check conditions
     private static boolean checkValues(LinkedList<Integer> linkedList) {
         for (int i = 1; i < linkedList.size(); i++) {
-            if (linkedList.get(i) + linkedList.get(0) == 2020) {
-                System.out.println("The answer is :" + linkedList.get(i) * linkedList.get(0));
+            if (linkedList.get(i) + linkedList.getFirst() == 2020) {
+                System.out.println("The answer is :" + linkedList.get(i) * linkedList.getFirst());
                 return true;
             }
         }

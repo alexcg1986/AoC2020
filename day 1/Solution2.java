@@ -31,11 +31,11 @@ class Solution2 {
     private static boolean checkValues(LinkedList<Integer> linkedList) {
         for (int i = 1; i < linkedList.size(); i++) {
             int temporal;
-            if ((temporal = linkedList.get(i) + linkedList.get(0)) < 2020) {
+            if ((temporal = linkedList.get(i) + linkedList.getFirst()) < 2020) {
                 for (int j = i + 1; j < linkedList.size(); j++) {
                     if (temporal + linkedList.get(j) == 2020) {
-                        System.out
-                                .println("The answer is: " + linkedList.get(j) * linkedList.get(i) * linkedList.get(0));
+                        System.out.println(
+                                "The answer is: " + linkedList.get(j) * linkedList.get(i) * linkedList.getFirst());
                         return true;
                     }
                 }
