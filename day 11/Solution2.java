@@ -121,10 +121,10 @@ import java.util.List;
 
 public class Solution2 extends Solution1 {
     public static void main(String[] args) {
-        System.out.println(getvisibleSeats(getInput()));
+        System.out.println(getVisibleSeats(getInput()));
     }
 
-    private static int getvisibleSeats(List<char[]> input) {
+    private static int getVisibleSeats(List<char[]> input) {
         final int MAX_COLUMNS = input.get(0).length;
         final int MAX_ROWS = input.size();
         boolean visibleAdjacent = false;
