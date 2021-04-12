@@ -66,14 +66,10 @@ public class Solution2 extends Solution1 {
 
         for (String instruction : input)
             switch (instruction.charAt(0)) {
-            case 'N' -> waypoints.merge('N', Integer.valueOf(instruction.substring(1)),
-                    (oldValue, newValue) -> oldValue + newValue);
-            case 'E' -> waypoints.merge('E', Integer.valueOf(instruction.substring(1)),
-                    (oldValue, newValue) -> oldValue + newValue);
-            case 'S' -> waypoints.merge('S', Integer.valueOf(instruction.substring(1)),
-                    (oldValue, newValue) -> oldValue + newValue);
-            case 'W' -> waypoints.merge('W', Integer.valueOf(instruction.substring(1)),
-                    (oldValue, newValue) -> oldValue + newValue);
+            case 'N' -> waypoints.merge('N', Integer.valueOf(instruction.substring(1)), Math::addExact);
+            case 'E' -> waypoints.merge('E', Integer.valueOf(instruction.substring(1)), Math::addExact);
+            case 'S' -> waypoints.merge('S', Integer.valueOf(instruction.substring(1)), Math::addExact);
+            case 'W' -> waypoints.merge('W', Integer.valueOf(instruction.substring(1)), Math::addExact);
             case 'R' -> {
                 Map<Character, Integer> temp = new HashMap<>(waypoints);
                 waypoints.clear();
@@ -98,9 +94,8 @@ public class Solution2 extends Solution1 {
                     waypoints.put(ROTATED_CARDINAL, VALUE_TO_REASIGN);
                 });
             }
-            case 'F' -> waypoints.keySet()
-                    .forEach(key -> movements.merge(key, waypoints.get(key) * Integer.valueOf(instruction.substring(1)),
-                            (oldValue, newValue) -> oldValue + newValue));
+            case 'F' -> waypoints.keySet().forEach(key -> movements.merge(key,
+                    waypoints.get(key) * Integer.valueOf(instruction.substring(1)), Math::addExact));
             }
 
         return calculateManhattanDistance(movements);

@@ -80,14 +80,10 @@ public class Solution1 {
 
         for (String instruction : input)
             switch (instruction.charAt(0)) {
-            case 'N' -> movements.merge('N', Integer.valueOf(instruction.substring(1)),
-                    (oldValue, newValue) -> oldValue + newValue);
-            case 'E' -> movements.merge('E', Integer.valueOf(instruction.substring(1)),
-                    (oldValue, newValue) -> oldValue + newValue);
-            case 'S' -> movements.merge('S', Integer.valueOf(instruction.substring(1)),
-                    (oldValue, newValue) -> oldValue + newValue);
-            case 'W' -> movements.merge('W', Integer.valueOf(instruction.substring(1)),
-                    (oldValue, newValue) -> oldValue + newValue);
+            case 'N' -> movements.merge('N', Integer.valueOf(instruction.substring(1)), Math::addExact);
+            case 'E' -> movements.merge('E', Integer.valueOf(instruction.substring(1)), Math::addExact);
+            case 'S' -> movements.merge('S', Integer.valueOf(instruction.substring(1)), Math::addExact);
+            case 'W' -> movements.merge('W', Integer.valueOf(instruction.substring(1)), Math::addExact);
             case 'R' -> {
                 final int NEW_DIRECTION = cardinalToNumber.get(direction)
                         + Integer.valueOf(instruction.substring(1)) / CONST;
@@ -100,8 +96,7 @@ public class Solution1 {
                 direction = NEW_DIRECTION < 1 ? numberToCardinal.get(NEW_DIRECTION + 4)
                         : numberToCardinal.get(NEW_DIRECTION);
             }
-            case 'F' -> movements.merge(direction, Integer.valueOf(instruction.substring(1)),
-                    (oldValue, newValue) -> oldValue + newValue);
+            case 'F' -> movements.merge(direction, Integer.valueOf(instruction.substring(1)), Math::addExact);
             }
 
         return calculateManhattanDistance(movements);
