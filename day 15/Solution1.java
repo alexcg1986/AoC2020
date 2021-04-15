@@ -81,7 +81,7 @@ public class Solution1 {
 
     // Starts with 0.
     // If the last term is the first occurrence of that term the next term is 0.
-    // If the last term has occurred TEMPly the next term is how many steps back
+    // If the last term has occurred previously the next term is how many steps back
     // was the most recent occurrence.
     static long getNumber(final List<Integer> input, final int MAX_TURNS) {
         final int[] STORE = new int[MAX_TURNS]; // the array to store values
@@ -98,8 +98,7 @@ public class Solution1 {
             STORE[lastSpoken] = turn - 1;
             // if it has been spoken before, we return the current value
             // minus the stored one, else 0;
-            // we also -1 each turn because after reading the initial values,
-            // we check the coincidences backwards
+            // we also -1 each turn to compensate offset
             final int TEMP = STORED_TURN == 0 ? 0 : turn - 1 - STORED_TURN;
             lastSpoken = TEMP;
         }
