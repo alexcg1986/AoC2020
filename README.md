@@ -19,4 +19,5 @@ Trying to solve past year's AoC challenges at one per day rate.
 |14|[Solution](https://github.com/alexcg1986/AoC2020/blob/master/day%2014/Solution1.java)|[Solution](https://github.com/alexcg1986/AoC2020/blob/master/day%2014/Solution2.java)|
 |15|[Solution](https://github.com/alexcg1986/AoC2020/blob/master/day%2015/Solution1.java)|[Solution](https://github.com/alexcg1986/AoC2020/blob/master/day%2015/Solution2.java)|
 |16|[Solution](https://github.com/alexcg1986/AoC2020/blob/master/day%2016/Solution1.java)|[Solution](https://github.com/alexcg1986/AoC2020/blob/master/day%2016/Solution2.java)|
+
 End of the journey :)
